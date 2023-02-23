@@ -1,0 +1,58 @@
+ #work .work-content {
+     grid-template-columns: repeat(2, 1fr);
+ }
+
+  #about {
+      display: block;
+      margin-bottom: 600px;
+  }
+
+  .l-heading {
+      font-size: 3rem;
+  }
+
+
+@media(max-width: 500px){
+    #navbar{
+       flex-direction: column; 
+       align-items: center;
+    }
+
+    #navbar .logo {
+        margin: 0.5rem 0;
+    }
+
+    #navbar ul {
+        padding: 1rem;
+    }
+
+
+    #about{
+        display: block;
+        margin-bottom:0px;
+    }
+
+    #about .about-img{
+        display: none;
+    }
+
+    .l-heading{
+        font-size: 2rem;
+    }
+
+    #work .work-content{
+      grid-template-columns: 1fr;  
+    }
+
+    .text-fields{
+ /* display: grid; */
+ grid-template-areas:
+  'name'
+  'email'
+  'subject'
+  'phone'
+  'message';
+  grid-gap: 1.2rem;
+  /* margin-bottom: 3rem; */
+}
+}
