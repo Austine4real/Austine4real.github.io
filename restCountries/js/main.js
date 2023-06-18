@@ -28,7 +28,7 @@ selected.addEventListener("click", function() {
 
 function startLoadingAnimation() {
     loading.style.display = "flex"; 
-    loading.innerHTML = `<h1 class="loading-text">Loading.....<span class="loading-ellipsis"></span></h1>`;
+    loading.innerHTML = `<h2 class="loading-text">Loading...<span class="loading-ellipsis"></span></h2>`;
   
     let ellipsisCount = 0;
     const ellipsisElement = loading.querySelector(".loading-ellipsis");
