@@ -288,6 +288,7 @@ body {
 }
 
 .loading{
+  display: flex;
   text-align: center;
   justify-content: center;
   font-size: 2rem;
