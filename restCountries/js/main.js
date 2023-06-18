@@ -1,4 +1,4 @@
-let i = 0;
+// let i = 0;
 
 let selected = document.querySelector(".select_box");
 let selectBox = document.querySelector("#box");
@@ -11,8 +11,8 @@ let searchIcon = document.querySelector(".search_box .fa-search");
 let cardCountry = document.querySelector(".countries");
 let details = document.querySelector(".country-details");
 let backBtn = document.querySelector(".btn_back");
-
-
+let loading = document.querySelector(".loading");
+loading.style.display = "flex";
 
 selected.addEventListener("click", function() {
     if (!selectBox.classList.contains("show")) {
@@ -26,8 +26,30 @@ selected.addEventListener("click", function() {
     }
 });
 
+function startLoadingAnimation() {
+    loading.style.display = "flex"; 
+    loading.innerHTML = `<h1 class="loading-text">Loading.....<span class="loading-ellipsis"></span></h1>`;
+  
+    let ellipsisCount = 0;
+    const ellipsisElement = loading.querySelector(".loading-ellipsis");
+  
+    const ellipsisInterval = setInterval(() => {
+      ellipsisElement.textContent = ".".repeat(ellipsisCount % 4);
+      ellipsisCount++;
+    }, 300);
+  
+    const checkContentInterval = setInterval(() => {
+      const content = document.querySelector("#card");
+      if (content && content.childElementCount > 0) {
+        clearInterval(checkContentInterval);
+        clearInterval(ellipsisInterval);
+        loading.style.display = "none"; 
+      }
+    }, 500);
+  }
 
 function getAllCountries() {
+    startLoadingAnimation();
     fetch(`https://restcountries.com/v2/all`)
         .then(response => response.json())
         .then(data => {
@@ -73,7 +95,6 @@ function getDataSelectedItem(data) {
 
 }
 
-
 selectElements.forEach(item => {
     item.addEventListener("click", () => {
         filterByRegion(item);
@@ -86,7 +107,6 @@ function filterByRegion(item) {
     getDataByRegion(item);
 }
 
-
 function getDataByRegion(item) {
     fetch(`https://restcountries.com/v2/region/${item.textContent.toLowerCase()}`)
         .then(response => response.json())
@@ -98,11 +118,9 @@ function getDataByRegion(item) {
         })
 }
 
-
 searchIcon.addEventListener("click", () => {
     searchByName(searchBox.value);
 });
-
 
 function searchByName(name) {
     fetch(`https://restcountries.com/v2/name/${name}`)
@@ -119,7 +137,6 @@ function searchByName(name) {
             console.log(err);
         });
 }
-
 
 function getDetailsData(index, data) {
     document.querySelector(".country-data").innerHTML =
@@ -158,7 +175,6 @@ backBtn.addEventListener("click", () => {
     cardCountry.classList.remove("hidden");
 });
 
-
 function getAllBorders(index, data) {
     let bordersLength = data[index].borders.length;
     let borders = document.getElementById("borders");
@@ -168,7 +184,6 @@ function getAllBorders(index, data) {
     }
 }
 
-
 function getAllLanguages(index, data) {
     let languagesLength = data[index].languages.length;
     let languages = document.querySelector(".languages");
@@ -177,7 +192,6 @@ function getAllLanguages(index, data) {
         languages.innerHTML += data[index].languages[m].name + `${(m == languagesLength-1 ?"":", ")}`;
     }
 }
-
 
 function getDetailsOfBorder(data) {
     document.querySelector(".country-data").innerHTML =
@@ -206,7 +220,6 @@ function getDetailsOfBorder(data) {
                 </div>
             </div>`;
 
-    
     let bordersLength = data.borders.length;
     let borders = document.getElementById("borders");
     for (let a = 0; a < bordersLength; a++) {
@@ -222,7 +235,6 @@ function getDetailsOfBorder(data) {
     getDataSelectedBorder(data.alpha3Code);
 
 }
-
 
 function searchByAlpha(alpha) {
     fetch(`https://restcountries.com/v2/alpha/${alpha}`)
