@@ -1,0 +1,247 @@
+:root {
+    /* ## Colors
+  
+    ### Primary */
+    --LimeGreen: hsl(163, 72%, 41%);
+    --BrightRed: hsl(356, 69%, 56%);
+    --Facebook: hsl(208, 92%, 53%);
+    --Twitter: hsl(203, 89%, 53%);
+    --Instagram: linear gradient hsl(37, 97%, 70%) to hsl(329, 70%, 58%);
+    --YouTube: hsl(348, 97%, 39%);
+    --Toggle: linear gradient hsl(210, 78%, 56%) to hsl(146, 68%, 55%);
+    --Toggle: hsl(230, 22%, 74%);
+    /* 
+    ### Neutral
+  
+    #### Dark Theme */
+    --VeryDarkBlueBG: hsl(230, 17%, 14%);
+    --VeryDarkBlueTopBGPattern: hsl(232, 19%, 15%);
+    --DarkDesaturatedBlueCardBG: hsl(228, 28%, 20%);
+    --DesaturatedBlueText: hsl(228, 34%, 66%);
+    --WhiteText: hsl(0, 0%, 100%);
+    /* #### Light Theme */
+    --WhiteBG: hsl(0, 0%, 100%);
+    --VeryPaleBlueTopBGPattern: hsl(225, 100%, 98%);
+    --LightGrayishBlueCardBG: hsl(227, 47%, 96%);
+    --DarkGrayishBlueText: hsl(228, 12%, 44%);
+    --VeryDarkBlueText: hsl(230, 17%, 14%);
+  }
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+  h5 {
+    color: var(--DesaturatedBlueText);
+  }
+  
+  p {
+    color: var(--LimeGreen);
+  }
+  
+  body {
+    font-size: 14px;
+    background-color: var(--VeryDarkBlueBG);
+    color: white;
+    font-family: "Inter", sans-serif;
+
+  } 
+  
+  /* === main header section ===*/
+.main-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-height: 20vh;
+    margin: 10px 10px;
+}
+
+.left-header > p,
+.right-header > p,
+.inner-text {
+  color: var(--Desaturated-Blue);
+  font-family: var(--font-base);
+  font-weight: 700;
+}
+
+.right-header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 15px;
+}
+
+/*=== switch-mode section ====*/
+div input[type="checkbox"] {
+  position: relative;
+  width: 50px;
+  height: 25px;
+  appearance: none;
+  -webkit-appearance: none;
+  background-image: linear-gradient(
+    to right,
+    hsl(210, 78%, 56%) 0%,
+    hsl(146, 68%, 55%) 100%
+  );
+  background-position: center;
+  background-size: cover;
+  outline: none;
+  border-radius: 20px;
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+  transition: 0.5s;
+}
+input[type="checkbox"]:checked[type="checkbox"] {
+  background-image: linear-gradient(
+    to right,
+    hsl(210, 78%, 56%) 0%,
+    hsl(146, 68%, 55%) 100%
+  );
+}
+input[type="checkbox"][type="checkbox"]::before {
+  content: "";
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  border-radius: 20px;
+  text-align: center;
+  top: 0;
+  left: 0;
+  background-color: black;
+  transform: scale(1.1);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  transition: 0.5s;
+}
+input[type="checkbox"]:checked[type="checkbox"]::before {
+  left: 25px;
+  background: white;
+}
+
+.mode {
+    padding-right: 20px;
+  }
+
+/*==== main-header/card classes ==== */
+.card {
+    background-color: var(--DarkDesaturatedBlueCardBG);
+    border-radius: 5px;
+}
+
+#instagram{
+  border-top: 3px solid;
+  border-image: linear-gradient(45deg, hsl(37, 97%, 70%) , hsl(329, 70%, 58%)) 1; 
+}
+#facebook{
+  border-top: 3px solid hsl(208, 92%, 53%);
+}
+#twitter{
+  border-top: 3px solid hsl(203, 89%, 53%);
+}
+#youtube{
+  border-top: 3px solid hsl(348, 97%, 39%);
+}
+
+.card a {
+  text-decoration: none;
+  color: var(--DesaturatedBlueText);
+  font-size: 15px;
+  margin-top: 30px;
+}
+.card a span {
+  padding: 8px;
+}
+.card h1 {
+  margin-top: 30px;
+  font-weight: 700;
+  font-size: 2rem;
+}
+.card h5 {
+  font-weight: 400;
+  letter-spacing: 8px;
+  font-size: 10px;
+}
+.card p {
+  font-weight: 400;
+  font-size: 15px;
+  margin-top: 30px;
+}
+
+.red {
+  color: var(--YouTube);
+}
+
+/*=== small-card section=== */
+.small-card {
+  background-color: var(--DarkDesaturatedBlueCardBG);
+  border-radius: 5px;
+}
+
+.small-card h5{
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.card-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 1rem;
+  }
+ 
+  .card-heading h1{
+    font-size: 1.5rem;
+    font-weight: 400;
+  }
+.adjust{
+  margin-top: 4.5rem; 
+}
+
+.font{
+font-size: 1.25rem;
+}
+.adjust-image{
+    margin-left: 1.7rem;
+  }
+  .adjust-img{
+    margin-left: 1rem;
+  }
+  
+/*=== From javascript=== */
+.bodyColorChange {
+  background-color: var(--WhiteBG);
+  color: black;
+}
+.cardColorChange {
+  background: var(--LightGrayishBlueCardBG);
+  color: black;
+}
+.cardColorChange h5{
+  color: black;
+}
+
+/*=== MEDIA QUERRY=== */
+
+@media screen and (max-width:768px) {
+  .main-header {
+    flex-direction: column;
+  }
+
+  .mode{
+    margin-left: -8rem;
+  }
+
+  .switch-mode{
+    margin-right: -8rem;
+  }
+  
+  .card-heading h1{
+    font-size: 1.3rem;
+  } 
+}
+
+@media screen and (min-width:375px) { 
+  .left-header h1{
+    font-size:1.2rem ;
+    font-weight: bold;
+  }
+}

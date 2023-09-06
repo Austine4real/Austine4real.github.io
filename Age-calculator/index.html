@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Age-Calculator</title>
+    <link rel="stylesheet" href="/style.css">
+    <script src="/main.js" defer></script>
+</head>
+<body>
+    <main> 
+        <!--=== MAIN CONTAINER ===-->
+    <div class="container">
+    <div class="form">
+
+        <!--=== INPUT SECTION ===-->
+    <div class="form-wrap">
+    <div class="form-wrap-group">
+        <label id="day-label" for="day">DAY</label>
+        <input type="text" id="day" name="day" placeholder="DD">
+        <small class="require day-require"></small>
+    </div>
+        <div class="form-wrap-group">
+        <label id="month-label"  for="day">MONTH </label>
+        <input type="text" id="month" name="month" placeholder="MM">
+        <small class="require month-require"></small>
+    </div>
+        <div class="form-wrap-group">
+        <label id="year-label"  for="day">YEAR </label>
+        <input type="text" id="year" name="year" placeholder="YYYY">
+        <small class="require year-require"></small>
+    </div>
+    </div>
+
+    <!--=== BUTTON SECTION ===-->
+    <div class="btn-content">
+    <hr>
+    <button type="submit" class="btn"><img src="/assets/images/icon-arrow.svg" alt="icon"></button>
+    <small></small>
+    </div>
+    </div>
+    
+    <!--=== OUTPUT SECTION ===-->
+    <div class="output">
+    <h1><span class="year-output">- -</span>years</h1>
+    <h1><span class="month-output">- -</span>months</h1>
+    <h1><span class="day-output">- -</span> days</h1>
+    </div>
+
+    </div>
+    </main>
+    
+</body>
+</html>

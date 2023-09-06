@@ -1,0 +1,85 @@
+body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #213c69;
+}
+.container-sign{
+    max-width: 300px;
+    margin: auto;
+    background: #f4f4f4;
+    padding: 20px;
+    margin-top: 50px;
+    border: none;
+    border-radius: 5px;
+
+    box-shadow: 10px 9px 39px -1px rgba(54, 53, 53, 0.75);
+-webkit-box-shadow: 10px 9px 39px -1px rgba(0,0,0,0.75);
+-moz-box-shadow: 10px 9px 39px -1px rgba(0,0,0,0.75);
+}
+.form-input {
+    color: #333;
+    margin-bottom: 10px;
+}
+.form-input span {
+    color: #ec1010;
+}
+.form-input label {
+ display: block;
+}
+.form-input input{
+    width: 290px;
+    height: 20px;
+    border:1px solid #b3b0b0;
+    border-radius: 5px;
+    background: #f4f4f4;
+}
+.form-input button{
+    width: 290px;
+    height: 25px;
+    margin-top: 8px;
+    padding: auto;
+    border:none;
+    border-radius: 5px;
+    background: #0de0a1;
+    color: #fff;
+    cursor: pointer;
+}
+.form-input p{
+    text-align: center;
+}
+
+.container-sign .header{
+    text-align: center;
+    margin-top: -15px;
+}
+.p-link{
+    text-align: center;
+    color: #fff;
+}
+.p-link a{
+    color: #0de0a1;
+    text-decoration: none;
+}
+.term{
+ font-size: 13px;
+}
+.term a{
+ font-size: 13px;
+ text-decoration: none;
+ color: blue ;
+}
+
+/* login */
+
+.form-input .p-log{
+    text-align: left;
+   }
+.p-log a{
+    text-decoration: none;
+    color: blue ;
+    font-size: 13px;
+   }
+
+   #login{
+    display: none;
+    margin-top: 100px;
+}

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./form.css">
+    <link rel="stylesheet" href="./style.css"><script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
+    <title>Form</title>
+</head>
+<body>
+  <main>
+    <div id="sign-up">
+    <div class="container-sign">
+    <div class="header">
+        <h1>Sign Up</h1>
+        <p>it's free and only take a minute</p>
+    </div>
+    <form >
+        <div class="form-input">
+            <label for="first name">First Name <span class="req">*</span></label>
+            <input type="text" name="first name" id="name" required>
+        </div>
+        <div class="form-input" >
+            <label for="last name">Last Name <span class="req">*</span></label>
+            <input type="text" name="last name" id="name" required>
+        </div>
+        <div class="form-input">
+            <label for="email">Email <span class="req">*</span></label>
+            <input type="email" name="email" id="email" required>
+        </div>
+        <div class="form-input">
+            <label for="password">Password <span class="req">*</span></label>
+            <input type="password" name="password" id="password" required>
+        </div>
+        <div class="form-input">
+            <label for="confirm password">Confirm Password <span class="req">*</span></label>
+            <input type="password 2" name="password" id="password" required>
+        </div>
+        <div class="form-input">
+            <button type="submit">Sign in</button>
+            <p class="term">By clicking Sign Up button you agree to <a href="#">Terms & Condition</a> and <a href="#">Privacy Policy</a></p>
+        </div>
+    </form>
+    </div>
+    <p class="p-link">Already have an acount? <a href="#login" id="mark">Login Here</a></p>
+    </div>
+
+    <div id="login">
+    <div class="container-sign">
+    <h1>Welcome Back!</h1>
+    <form action="">
+    <div class="form-input">
+    <label for="email">Email Address <span class="req">*</span></label>
+    <input type="email" required autocomplete="off">
+    </div>
+
+    <div class="form-input">
+    <label for=" confirm password"> Password <span class="req">*</span></label>
+    <input type="password 2" required autocomplete="off">
+    </div>
+    <div class="form-input">
+    <button type="submit">Login</button>
+    <p class="p-log"><a href="#">Forget Password</a></p>
+    </div>
+    </form>
+    </div> 
+    <p class="p-link">Don't have an account yet: <a href="#sign-up" id="john">Register</a></p>
+    </div>
+    </main>
+   
+  <script>
+
+    $('#mark').click(function(){
+        $('#sign-up').hide()
+        $('#login').show()
+    });
+
+
+    $('#john').click(function(){
+        $('#sign-up').show()
+        $('#login').hide()
+    });
+
+</script>
+</body>
+</html>
